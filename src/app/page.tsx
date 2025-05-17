@@ -59,10 +59,10 @@ const HomePage = () => (
           </div>
           
           {/* tools/skills used */}
-          <section className="py-5 flex">
+          <section className="py-5 flex flex-col md:flex-row">
 
             {/* frontend */}
-            <section>
+            <section className="py-5">
               <h3 className="flex items-center text-lg font-bold">
                 <FaCode className="mr-2" /> Frontend
               </h3>
@@ -75,7 +75,7 @@ const HomePage = () => (
             </section>
 
             {/* backend */}
-            <section>
+            <section className="py-5">
               <h3 className="flex items-center text-lg font-bold">
                 <FaServer className="mr-2" /> Backend
               </h3>
@@ -88,7 +88,7 @@ const HomePage = () => (
             </section>
 
             {/* Production */}
-            <section>
+            <section className="py-5">
               <h3 className="flex items-center text-lg font-bold">
                 <FaClipboardCheck className="mr-2" /> Production
               </h3>
