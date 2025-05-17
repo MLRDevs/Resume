@@ -7,13 +7,24 @@ import { useEffect, useState } from 'react';
 
 const Guestbook = () => {
 
-    const [users, setUsers] = useState([]);
+    const [users, setUsers] = useState<{ name: string; email: string; company: string }[]>([]);
     const [formdata, setFormdata] = useState({ name: '', email: '', company: ''});
 
     const fetchUsers = async () => {
-        const res = await fetch('/api/users');
-        const data = await res.json();
-        setUsers(data);
+        try {
+            const res = await fetch('/api/users');
+            const data = await res.json();
+            
+            if (Array.isArray(data)) {
+                setUsers(data);
+            }
+            else {
+                console.error('Expected array but got:', data);
+            }
+        }
+        catch (err) {
+            console.error('Failed to get users:', err);
+        }
     };
 
     useEffect(() => {
@@ -25,7 +36,7 @@ const Guestbook = () => {
         await fetch('/api/users', {
             method: 'POST',
             headers: {
-                'Conent-Type' : 'application/json'
+                'Content-Type' : 'application/json'
             },
             body: JSON.stringify(formdata)
         });

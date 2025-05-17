@@ -132,10 +132,9 @@ exports.Prisma.SortOrder = {
   desc: 'desc'
 };
 
-exports.Prisma.UsersOrderByRelevanceFieldEnum = {
-  name: 'name',
-  email: 'email',
-  company: 'company'
+exports.Prisma.QueryMode = {
+  default: 'default',
+  insensitive: 'insensitive'
 };
 
 

@@ -104,10 +104,9 @@ exports.Prisma.SortOrder = {
   desc: 'desc'
 };
 
-exports.Prisma.UsersOrderByRelevanceFieldEnum = {
-  name: 'name',
-  email: 'email',
-  company: 'company'
+exports.Prisma.QueryMode = {
+  default: 'default',
+  insensitive: 'insensitive'
 };
 
 
@@ -125,10 +124,14 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\mille\\Documents\\CS\\Portfolio\\resume\\src\\generated\\prisma",
+      "value": "C:\\Users\\mille\\Documents\\CS\\Portfolio\\src\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
+      "binaryTarget": [
+        "nativ",
+        "debian-openssl-1.1.x"
+      ],
       "engineType": "library"
     },
     "binaryTargets": [
@@ -139,7 +142,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\mille\\Documents\\CS\\Portfolio\\resume\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\mille\\Documents\\CS\\Portfolio\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -152,7 +155,7 @@ const config = {
   "datasourceNames": [
     "db"
   ],
-  "activeProvider": "mysql",
+  "activeProvider": "postgresql",
   "postinstall": false,
   "inlineDatasources": {
     "db": {
@@ -162,8 +165,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\nmodel Users {\n  id      Int    @id @default(autoincrement())\n  name    String\n  email   String @unique\n  company String\n}\n\ndatasource db {\n  provider = \"mysql\"\n  url      = env(\"DATABASE_URL\")\n}\n",
-  "inlineSchemaHash": "3de2e0b3c04c454d966695f16351ca0004fc2da2a92a4999893a4d299b18ca76",
+  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider     = \"prisma-client-js\"\n  output       = \"../src/generated/prisma\"\n  binaryTarget = [\"nativ\", \"debian-openssl-1.1.x\"]\n}\n\nmodel Users {\n  id      Int    @id @default(autoincrement())\n  name    String\n  email   String @unique\n  company String\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n",
+  "inlineSchemaHash": "fc39ddd1124866bed067bddf6a8d3e6c787b93f8840ee28ce2686acac98c5dfc",
   "copyEngine": true
 }
 config.dirname = '/'

@@ -5,8 +5,9 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
+  provider     = "prisma-client-js"
+  output       = "../src/generated/prisma"
+  binaryTarget = ["nativ", "debian-openssl-1.1.x"]
 }
 
 model Users {
@@ -17,6 +18,6 @@ model Users {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
