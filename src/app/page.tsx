@@ -5,9 +5,15 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { FaCode, FaServer, FaTools } from "react-icons/fa";
+import Head from 'next/head';
+
+export const metadata = {
+  title: 'AM - Home'
+}
 
 const HomePage = () => (
   <div className="flex flex-col min-h-screen">
+
     {/* The Header appears at the top */}
     <Header />
     

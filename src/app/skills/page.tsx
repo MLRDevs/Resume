@@ -8,6 +8,10 @@ import Guestbook from '../components/Guestbook';
 import Tree from '../components/Tree';
 import Sorts from '../components/Sorts';
 
+export const metadata = {
+    title: 'AM - Skills'
+}
+
 
 export default function SkillsPage() {
 

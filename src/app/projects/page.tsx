@@ -5,6 +5,10 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProjectCard from '../components/Projectcard';
 
+export const metadata = {
+    title: 'AM - Projects'
+}
+
 export default function ProjectsPage() {
     return (
         <div>

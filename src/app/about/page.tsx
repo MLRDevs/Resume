@@ -9,6 +9,10 @@ import Timeline from '../components/Timeline';
 
 import dynamic from "next/dynamic";
 
+export const metadata = {
+    title: 'AM - About'
+}
+
 const Map = dynamic(() => import("../components/Map"), {
   ssr: false,
   loading: () => <p>Loading...</p>,
