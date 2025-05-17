@@ -51,7 +51,7 @@ export default function ProjectsPage() {
                             This not only shows that I know the skills that I do have, but that I can
                             utilize them in a specific use case if need be.
                         "
-                        link=""
+                        link="https://github.com/MLRDevs/Resume"
                     />
                 </section>
                 

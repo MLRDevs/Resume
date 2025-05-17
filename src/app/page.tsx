@@ -75,7 +75,7 @@ const HomePage = () => (
               </h3>
               <ul className="list-disc px-10">
                 <li>Node.js</li>
-                <li>MySql + Prisma</li>
+                <li>PostgreSQL + Prisma</li>
                 <li>RESTful APIs</li>
               </ul>
 
