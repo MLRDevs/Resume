@@ -56,7 +56,12 @@ export default function SkillsPage() {
                     {/* Title */}                    
                     <h2 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
                         Guestbook
-                        <p className="text-lg text-gray-500 md:max-w-1/2">This is the Guestbook. Feel free to fill it out and add your entry to the table, all entries shown have been made by people who have visited before. Everything is backend logic with Typescript and Prisma with the data being stored in a MySql database.</p>
+                        <p className="text-lg text-gray-500 md:max-w-1/2">
+                            This is the Guestbook. Feel free to fill it out and add your entry to the table, 
+                            all entries shown have been made by people who have visited before. Everything is 
+                            backend logic with Typescript and Prisma with the data being stored in a PostgreSQL 
+                            database via Neon.
+                        </p>
                     </h2>
 
                     {/* Guessbook Table */}
@@ -74,7 +79,11 @@ export default function SkillsPage() {
                     {/* Title */}
                     <h2 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
                         Trees
-                        <p className="text-lg text-gray-500 md:max-w-1/2">This shows off some tree structures I have used along with sorting and traversing algorithms, feel free to try the buttons and test it out.</p>
+                        <p className="text-lg text-gray-500 md:max-w-1/2">
+                            This shows off some tree structures I have used along with sorting 
+                            and traversing algorithms, feel free to try the buttons and test it
+                            out.
+                        </p>
                     </h2>
 
                     {/* tree structure */}

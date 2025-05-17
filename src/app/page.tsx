@@ -4,7 +4,7 @@
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { FaCode, FaServer, FaTools } from "react-icons/fa";
+import { FaCode, FaServer, FaTools, FaClipboardCheck } from "react-icons/fa";
 import Head from 'next/head';
 
 export const metadata = {
@@ -86,6 +86,18 @@ const HomePage = () => (
               </ul>
 
             </section>
+
+            {/* Production */}
+            <section>
+              <h3 className="flex items-center text-lg font-bold">
+                <FaClipboardCheck className="mr-2" /> Production
+              </h3>
+              <ul className="list-disc px-10">
+                <li>Vercel</li>
+                <li>Neon</li>
+              </ul>
+            </section>
+
           </section>
         </section>
       </div>
