@@ -1,6 +1,11 @@
 [build]
-    command = "CI= npm run build"
-    publish = ".next"
+  command = "CI= npm run build"
+  publish = ".next"
 
 [functions]
-    external_node_modules = ["@prisma/client", ".prisma/client"]
+  external_node_modules = ["@prisma/client", ".prisma/client"]
+
+[[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
