@@ -39,7 +39,8 @@ export default function ProjectsPage() {
                             the Cybersecurity professor at Northern Michigan. It is a full stack site
                             with an Angular.js frontend with Node.js and MySql backend. It used Docker
                             containers as a terminal for students to use and find the flags. See more
-                            on the Github link below:
+                            on the Github link below which also includes our paper detailing more about
+                            the project itself:
                         "
                         link="https://github.com/MLRDevs/CTF"
                     />

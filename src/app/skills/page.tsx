@@ -27,9 +27,8 @@ export default function SkillsPage() {
                 {/* blurb about this page */}
                 <section className="text-center items-center justify-center flex flex-col py-10">
                     <p className="w-full px-10 md:w-1/2 text-xl py-3">
-                        This is an interactive section displaying the skills that I have.
-                        Feel free to try some of the interactive sections and fill out the
-                        Guestbook.
+                        Interactive section visually displaying my skill set and abilities to use my
+                        Computer Science knowledge into real world applications. 
                     </p>
                     <div className="h-1 w-1/2 bg-gradient-to-r from-blue-500 to-purple-500 rounded"></div>
                 </section>
@@ -40,7 +39,12 @@ export default function SkillsPage() {
                     {/* Title */}                    
                     <h2 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
                         Program Examples
-                        <p className="text-lg text-gray-500 md:max-w-1/2">These are some program assignments / one off programs I have done.</p>
+                        <p className="text-lg text-gray-500 md:max-w-1/2">
+                            Demonstrates fundamental Computer Science concepts and techniques 
+                            in different languages. The Java and C++ examples were assignments
+                            completed during my time at Northern Michigan University. Each file 
+                            in the code block contains a description of what the program does.
+                        </p>
                     </h2>
 
                     {/* Code blocks */}
@@ -57,10 +61,10 @@ export default function SkillsPage() {
                     <h2 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
                         Guestbook
                         <p className="text-lg text-gray-500 md:max-w-1/2">
-                            This is the Guestbook. Feel free to fill it out and add your entry to the table, 
-                            all entries shown have been made by people who have visited before. Everything is 
-                            backend logic with Typescript and Prisma with the data being stored in a PostgreSQL 
-                            database via Neon.
+                            A full stack Guestbook application built from Next.js, TailwindCSS, and Neon. Users
+                            can enter their name, email, and company/location which are stored into
+                            a PostgreSQL database. This project deepended my understanding of full stack applications
+                            with database integration via API routes.
                         </p>
                     </h2>
 
@@ -80,9 +84,9 @@ export default function SkillsPage() {
                     <h2 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
                         Trees
                         <p className="text-lg text-gray-500 md:max-w-1/2">
-                            This shows off some tree structures I have used along with sorting 
-                            and traversing algorithms, feel free to try the buttons and test it
-                            out.
+                            Visualizes tree traversal algorithms. These give a deeper
+                            understanding into recursion and other data structures such as 
+                            linked lists.
                         </p>
                     </h2>
 
@@ -101,7 +105,10 @@ export default function SkillsPage() {
                     {/* Title */}
                     <h2 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
                         Sorting
-                        <p className="text-lg text-gray-500 md:max-w-1/2">This shows some simple sorting algorthims for arrays that I have used</p>
+                        <p className="text-lg text-gray-500 md:max-w-1/2">
+                            Demonstrates different sorting algorithms on arrays. These algorithms
+                            are crucial for the next step which would be binary search.
+                        </p>
                     </h2>
 
                     {/* Sorting arrays */}
