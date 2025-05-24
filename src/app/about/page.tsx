@@ -24,7 +24,7 @@ export default function AboutPage() {
             <Head>
                 <title>AM - About</title>
             </Head>
-            <div className="min-h-screen flex flex-col">
+            <div className="bg-black text-white min-h-screen flex flex-col">
 
                 {/* Header at the top */}
                 <Header />

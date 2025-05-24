@@ -22,7 +22,7 @@ export default function SkillsPage() {
             <Header />
             
             {/* Main container */}
-            <main className="">
+            <main className="bg-black text-white">
 
                 {/* blurb about this page */}
                 <section className="text-center items-center justify-center flex flex-col py-10">

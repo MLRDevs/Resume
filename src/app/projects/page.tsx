@@ -17,7 +17,7 @@ export default function ProjectsPage() {
             <Header />
 
             {/* main section */}
-            <main>
+            <main className="bg-black text-white">
 
                 {/* Title */}
                 <section className="text-center items-center justify-center flex flex-col py-10">

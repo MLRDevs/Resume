@@ -11,7 +11,7 @@ import { CgProfile } from "react-icons/cg";
 const Header = () => {
     return (
         <header className="bg-gray-900 flex flex-col justify-center items-center">
-            <h1 className="text-6xl px-10 py-5">Alex Miller</h1>
+            <h1 className="text-6xl px-10 py-5 text-white">Alex Miller</h1>
             <nav className="flex space-x-10 py-5">
                 
                 {/* landing page */}

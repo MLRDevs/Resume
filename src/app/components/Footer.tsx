@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
 
             {/* bottome of footer */}
-            <div className="py-6 text-center">
+            <div className="py-6 text-center text-white">
                 <div className="flex justify-center items-center">
                    <MdPhone size={16} color="white" />
                    <p className="px-3 py-1">(906) 235-4870</p>
