@@ -23,7 +23,7 @@ const Timeline = () => {
         { type: 'Skills', title: 'Unity, C#', date: '2022'},
         { type: 'Projects', title: 'RNGeo 2D game', date: '2022'},
         { type: 'Personal', title: 'Teamwork', date:''},
-        { type: 'Work', title: 'Isle Royale Ferry Line', date: 'May 2022 - August 2023'},
+        { type: 'Work', title: 'Isle Royale Ferry Line', date: 'May 2022 - August 2022'},
         { type: 'Skills', title: 'Data Structures', date: '2023'},
         { type: 'Personal', title: 'Communication', date:''},
         { type: 'Skills', title: 'Python', date: '2023'},
