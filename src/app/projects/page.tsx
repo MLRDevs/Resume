@@ -59,6 +59,21 @@ export default function ProjectsPage() {
                         link="https://github.com/MLRDevs/Resume"
                     />
                 </section>
+
+                {/* Task Manager */}
+                <section>
+                    <ProjectCard
+                        title="Task Manager"
+                        description="
+                            Create and move tasks from different sections based on completion (ToDo, In 
+                            Progress, Done). This project deepened my understand of React and the different
+                            libraries such as DnDKit. As well as was my introduction to Axios for API calls 
+                            along with using Python as a backend language with Django.
+                        "
+                        link="
+                        https://github.com/MLRDevs/CS_Projects/tree/master/Projects/TaskManager"
+                    />
+                </section>
                 
             </main>
 
