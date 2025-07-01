@@ -27,10 +27,10 @@ const Blocks = () => {
       }, []);
 
     return (
-        <div className="flex flex-col md:flex-row m-10">
+        <div className="flex flex-col md:flex-row">
             {codes.map((snippet, index) => (
                 <div key={index} className=" max-w-full md:max-w-1/3 px-1">
-                    <div className="bg-gray-900 rounded-2xl text-center">
+                    <div className="bg-gray-900 rounded-2xl text-center m-10">
                         <h1 className="text-xl font-bold mb-2 py-10 md:py-5">{snippet.title}</h1>
                     </div>
                     <p className="text-lg text-gray-500">{snippet.language}</p>
