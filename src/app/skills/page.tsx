@@ -37,7 +37,7 @@ export default function SkillsPage() {
                 <section className="py-10">
 
                     {/* Title */}                    
-                    <h2 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
+                    <h1 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
                         Program Examples
                         <p className="text-lg text-gray-500 md:max-w-1/2">
                             Demonstrates fundamental Computer Science concepts and techniques 
@@ -45,10 +45,10 @@ export default function SkillsPage() {
                             completed during my time at Northern Michigan University. Each file 
                             in the code block contains a description of what the program does.
                         </p>
-                    </h2>
+                    </h1>
 
                     {/* Code blocks */}
-                    <div>
+                    <div className="py-10">
                         <Codes />
                     </div>
 
@@ -58,7 +58,7 @@ export default function SkillsPage() {
                 <section className="py-10">
 
                     {/* Title */}                    
-                    <h2 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
+                    <h1 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
                         Guestbook
                         <p className="text-lg text-gray-500 md:max-w-1/2">
                             A full stack Guestbook application built from Next.js, TailwindCSS, and Neon. Users
@@ -66,7 +66,7 @@ export default function SkillsPage() {
                             a PostgreSQL database. This project deepended my understanding of full stack applications
                             with database integration via API routes.
                         </p>
-                    </h2>
+                    </h1>
 
                     {/* Guessbook Table */}
                     <div>
@@ -81,14 +81,14 @@ export default function SkillsPage() {
                 <section className="py-10">
 
                     {/* Title */}
-                    <h2 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
+                    <h1 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
                         Trees
                         <p className="text-lg text-gray-500 md:max-w-1/2">
                             Visualizes tree traversal algorithms. These give a deeper
                             understanding into recursion and other data structures such as 
                             linked lists.
                         </p>
-                    </h2>
+                    </h1>
 
                     {/* tree structure */}
                     <div>
@@ -103,13 +103,13 @@ export default function SkillsPage() {
 
 
                     {/* Title */}
-                    <h2 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
+                    <h1 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
                         Sorting
                         <p className="text-lg text-gray-500 md:max-w-1/2">
                             Demonstrates different sorting algorithms on arrays. These algorithms
                             are crucial for the next step which would be binary search.
                         </p>
-                    </h2>
+                    </h1>
 
                     {/* Sorting arrays */}
                     <div className="py-10">

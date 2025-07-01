@@ -5,6 +5,7 @@
 
 import { useState } from "react"; // use states to change whats on the page
 import { FaCode, FaGraduationCap, FaBriefcase, FaProjectDiagram, FaUser } from "react-icons/fa";
+import { MdOutlinePhotoSizeSelectSmall } from "react-icons/md";
 
 const Timeline = () => {
 
@@ -61,11 +62,11 @@ const Timeline = () => {
 
             {/* dropdown menu */}
             <div className="mb-6">
-                <label htmlFor="filter" className="mr-2 font-medium">Filter:</label>
+                <label htmlFor="filter" className="mr-2 font-bold text-xl">Filter:</label>
                 <select
                     value={filter}
                     onChange={(e) => setFilter(e.target.value)}
-                    className="border px-2 py-1 rounded text-black bg-white"
+                    className="border px-2 py-1 rounded-xl text-black bg-white"
                 >
                     <option value="all">All</option>
                     <option value="Skills">Tech Skills</option>

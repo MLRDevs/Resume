@@ -27,28 +27,31 @@ const Blocks = () => {
       }, []);
 
     return (
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row m-10">
             {codes.map((snippet, index) => (
                 <div key={index} className=" max-w-full md:max-w-1/3 px-1">
-                <h2 className="text-lg font-bold mb-2 py-5">{snippet.title}</h2>
-                <p className="text-lg text-gray-500">{snippet.language}</p>
-                <SyntaxHighlighter
-                    language={snippet.lang}
-                    style={oneDark}
-                    showLineNumbers
-                    wrapLongLines={true}
-                    customStyle={{ 
-                        margin: 0, 
-                        padding: '1rem', 
-                        height: '400px',
-                        overflowX: 'auto',
-                        wordBreak: 'break-word',
-                        whiteSpace: 'pre-wrap'
-                    }}
-                    className="rounded-md"
-                >
-                    {snippet.code}
-                </SyntaxHighlighter>
+                    <div className="bg-gray-900 rounded-2xl text-center">
+                        <h1 className="text-xl font-bold mb-2 py-10 md:py-5">{snippet.title}</h1>
+                    </div>
+                    <p className="text-lg text-gray-500">{snippet.language}</p>
+                    <SyntaxHighlighter
+                        language={snippet.lang}
+                        style={oneDark}
+                        showLineNumbers
+                        wrapLongLines={true}
+                        customStyle={{ 
+                            margin: 0, 
+                            padding: '1rem', 
+                            height: '400px',
+                            overflowX: 'auto',
+                            wordBreak: 'break-word',
+                            whiteSpace: 'pre-wrap'
+                        }}
+                        className="rounded-md"
+                    >
+                        {snippet.code}
+                    </SyntaxHighlighter>
+                    <br></br>
                 </div>
             ))}
         </div>

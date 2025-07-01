@@ -62,9 +62,9 @@ const Sorts = () => {
 
             
             {/* buttons for sorts */}
-            <div className="flex flex-col py-10 px-10 space-y-2 font-bold w-full md:w-1/3">
+            <div className="flex flex-col py-10 px-10 gap-y-4 font-bold w-full md:w-1/3">
                 <button 
-                    className="border-2 border-white bg-gray-900 text-white py-1 px-1"
+                    className="rounded-xl border-2 border-white bg-gray-900 text-white py-1 px-1"
                     onClick={() => {
                         setDisabled(true);
                         BS(arr, setArr, setStatus, () => {
@@ -76,7 +76,7 @@ const Sorts = () => {
                     Bubble Sort
                 </button>
                 <button 
-                    className="border-2 border-white bg-gray-900 text-white py-1 px-1"
+                    className="rounded-xl border-2 border-white bg-gray-900 text-white py-1 px-1"
                     onClick={() => {
                         setDisabled(true);
                         SS(arr, setArr, setStatus, () => {
@@ -88,7 +88,7 @@ const Sorts = () => {
                     Selection Sort
                 </button>
                 <button 
-                    className="border-2 border-white bg-gray-900 text-white py-1 px-1"
+                    className="rounded-xl border-2 border-white bg-gray-900 text-white py-1 px-1"
                     onClick={() => {
                         setDisabled(true);
                         MG(arr, setArr, setStatus, () => {

@@ -52,10 +52,10 @@ const Tree = () => {
             </div>
 
             {/* buttons for sorting */}
-            <div className="flex flex-col px-10 py-10 space-y-2 font-bold w-full md:w-1/3">
+            <div className="flex flex-col px-10 py-10 gap-y-4 font-bold w-full md:w-1/3">
                 <button 
                     disabled={disabled}
-                    className="border-2 border-white bg-gray-900 text-white py-1 px-1"
+                    className="rounded-xl border-2 border-white bg-gray-900 text-white py-1 px-1"
                     onClick={async () => {
                         setDisabled(true);
                         setVisited([]);
@@ -69,7 +69,7 @@ const Tree = () => {
                 </button>
                 <button 
                     disabled={disabled}
-                    className="border-2 border-white bg-gray-900 text-white py-1 px-1"
+                    className="rounded-xl border-2 border-white bg-gray-900 text-white py-1 px-1"
                     onClick={async () => {
                         setDisabled(true);
                         setVisited([]);
@@ -85,7 +85,7 @@ const Tree = () => {
                 </button>
                 <button
                     disabled={disabled} 
-                    className="border-2 border-white bg-gray-900 text-white py-1 px-1"
+                    className="rounded-xl border-2 border-white bg-gray-900 text-white py-1 px-1"
                     onClick={async () => {
                         setDisabled(true);
                         setVisited([]);
@@ -100,7 +100,7 @@ const Tree = () => {
                 </button>
                 <button 
                     disabled={disabled}
-                    className="border-2 border-white bg-gray-900 text-white py-1 px-1"
+                    className="rounded-xl border-2 border-white bg-gray-900 text-white py-1 px-1"
                     onClick={async () => {
                         setDisabled(true);
                         setVisited([]);

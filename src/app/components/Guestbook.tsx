@@ -49,11 +49,11 @@ const Guestbook = () => {
 
             {/* form to add */}
             <div>
-                <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-x-2 py-2 items-center justify-center">
+                <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-x-3 py-2 gap-y-3 items-center justify-center">
                     <label>Name</label>
                     <input 
                         placeholder="First Last" 
-                        className="border border-white placeholder:px-1 text-center"
+                        className="border border-white rounded-xl placeholder:px-1 text-center"
                         type="text"
                         value={formdata.name}
                         required
@@ -63,7 +63,7 @@ const Guestbook = () => {
                     <label>Email</label>
                     <input 
                         placeholder="you@example.com" 
-                        className="border border-white placeholder:px-1 text-center"
+                        className="border border-white rounded-xl placeholder:px-1 text-center"
                         type="email"
                         value={formdata.email}
                         required
@@ -72,7 +72,7 @@ const Guestbook = () => {
                     <label>Company / Location</label>
                     <input 
                         placeholder="Company X at Y" 
-                        className="border border-white placeholder:px-1 text-center"
+                        className="border border-white rounded-xl placeholder:px-1 text-center"
                         type="text"
                         value={formdata.company}
                         required
@@ -80,31 +80,31 @@ const Guestbook = () => {
                     />
 
                     <div className="flex items-center justify-center px-2">
-                        <button type="submit" className="bg-green-500 text-black text-lg w-25">Add</button>
+                        <button type="submit" className="bg-green-500 text-black text-lg w-25 rounded-xl hover:bg-green-600">Add</button>
                     </div>
                 </form>
                 
             </div>
 
             {/* table */}
-            <div className="flex items-center justify-center py-5">
-                <table className="border-collapse border border-gray-300">
+            <div className="flex items-center justify-center py-5 rounded-xl shadow-lg">
+                <table className="rounded-lg shadow-md text-white">
                     {/* Table Header */}
-                    <thead>
+                    <thead className="bg-gray-900">
                         <tr>
-                            <th className="border-2 border-gray-700 px-4 py-2 bg-gray-900 text-white">Name</th>
-                            <th className="border-2 border-gray-700 px-4 py-2 bg-gray-900 text-white">Email</th>
-                            <th className="border-2 border-gray-700 px-4 py-2 bg-gray-900 text-white">Company / Location</th>
+                            <th className="px-4 py-2">Name</th>
+                            <th className="px-4 py-2">Email</th>
+                            <th className="px-4 py-2">Company / Location</th>
                         </tr>
                     </thead>
 
                     {/* Table Body */}
                     <tbody>
                         {users.map((user: any) => (
-                            <tr key={user.id}>
-                                <td className="border-2 border-gray-700 px-4 py-2">{user.name}</td>
-                                <td className="border-2 border-gray-700 px-4 py-2">{user.email}</td>
-                                <td className="border-2 border-gray-700 px-4 py-2">{user.company}</td>
+                            <tr key={user.id} className="border-t border-gray-700">
+                                <td className="px-4 py-2">{user.name}</td>
+                                <td className="px-4 py-2">{user.email}</td>
+                                <td className="px-4 py-2">{user.company}</td>
                             </tr>
                         ))}
                     </tbody>
