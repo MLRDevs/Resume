@@ -49,7 +49,7 @@ export default function ProjectsPage() {
                 {/* Northern Kyber */}
                 <section>
                     <ProjectCard
-                        title="Northern Kyber | Capture The Flag Platform"
+                        title="Northern Kyber - Capture The Flag Platform"
                         description="
                             From Senior Project to SaaS platform, the project mentioned above came to fruition. 
                             The tech stack and everything was changed to make it easier to manage the source code 
