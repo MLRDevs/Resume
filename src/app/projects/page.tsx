@@ -46,6 +46,21 @@ export default function ProjectsPage() {
                     />
                 </section>
 
+                {/* Northern Kyber */}
+                <section>
+                    <ProjectCard
+                        title="Northern Kyber | Capture The Flag Platform"
+                        description="
+                            From Senior Project to SaaS platform, the project mentioned above came to fruition. 
+                            The tech stack and everything was changed to make it easier to manage the source code 
+                            and also to allow more features than before. It has a react + nextjs frontent along with 
+                            a nodejs backend for the Docker containers and postgreSQL as a database. This goes way 
+                            beyond what the Senior Project is as we added more to allow more customization.
+                        "
+                        link="https://www.northernkyber.com/"
+                    />
+                </section>
+
                 {/* This site */}
                 <section>
                     <ProjectCard
