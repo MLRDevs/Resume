@@ -5,103 +5,120 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { FaCode, FaServer, FaTools, FaClipboardCheck } from "react-icons/fa";
-import Head from 'next/head';
+import BarTitle from './components/BarTitle';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AM - Home'
 }
 
 const HomePage = () => (
-  <div className="flex flex-col min-h-screen">
+  <div className="flex flex-col justify-center min-h-screen bg-navy-blue">
 
     {/* The Header appears at the top */}
     <Header page="Home" />
-    
-    {/* main container */}
-    <main className="bg-navy-blue text-white flex flex-col md:flex-row items-start items-center justify-center space-x-10 py-10 px-10">
 
-      {/* image of me */}
-      <div className="flex justify-center">
-        <img
-          src="/images/me.jpg"
-          alt="picture of me"
-          className="w-64 h-64 object-cover rounded-full"
-        />
+    <div className="flex flex-col justify-center items-center m-10 gap-10">
+
+      <div className="flex flex-col sm:flex-row gap-10 justify-center items-center">
+
+        {/* image of me */}
+        <div className="">
+          <img
+            src="/images/me.jpg"
+            alt="Picture of Me"
+            className="w-64 h-64 sm:w-96 sm:h-96 object-cover rounded-full"
+          />
+        </div>
+
+        {/* introduction */}
+        <div className="flex flex-col text-3xl text-center sm:w-3/4 md:w-1/2">
+          <div className="text-ice-white">
+            Hello, I'm Alex I'm a  
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <BarTitle title="Software Engineer" />
+            <div className="text-ice-white text-xl">
+              I'm an Ambitious and adaptable individual with strong communication and problem
+              solving skills. Eager and ready to apply knowledge and skills towards complex 
+              challenges building software solutions.
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="flex flex-col py-5">
-
-        {/* profile lines */}
-        <section className="max-w-xl">
-          Ambitious and adaptable individual with strong communication and problem 
-          solving skills. Eager and ready to apply knowledge and skills towards complex 
-          challenges building software solutions. 
-        </section>
-
-        {/* blub about me */}
-        <section className="py-5">
-          <p className="font-bold py-1">Some quick facts about me:</p>
-          <ul className="list-disc px-5">
-            <li>Bachelor's of Science from Northern Michigan University</li>
-            <li>Born and raised in Calumet, MI</li>
-            <li>Build stuff like this in my spare time, always learning</li>
-          </ul> 
-        </section>
-
-        {/* about website */}
-        <section className="py-5 max-w-xl">
-          <div className="py-1">
-            This website itself is a project I've made that involves just
-            about everything I have currently learned, feel free to browse 
-            using the links in the header. If you want an old school Resume
-            document, that is also available in the header. This site is 
-            broken down into these skills:
+      {/* sections */}
+      <div className="flex flex-col justify-center items-center gap-10 text-left text-2xl mt-10">
+        
+        <div className="sm:w-1/2 m-10">
+          <BarTitle title="Quick Facts About Me" />
+          <div className="text-ice-white font-normal text-lg flex flex-col justify-center items-center gap-10">
+            <ul className="list-disc">
+              <li>Born and raised in the Upper Peninsula of Michigan</li>
+              <li>
+                Hockey fan
+                <span className="text-red-500 font-bold"> #LGRW </span>
+              </li>
+              <li>Build stuff like this in my spare time, always learning</li>
+            </ul>
+            <Link
+              href="/About"
+              title="About Me"
+              className="p-2 rounded-xl text-ice-white bg-blue-500 hover:bg-blue-600 active:bg-blue-700 transition font-bold w-50"
+            >
+              Check out more here
+            </Link>
           </div>
-          
-          {/* tools/skills used */}
-          <section className="py-5 flex flex-col md:flex-row">
+        </div>
 
-            {/* frontend */}
-            <section className="py-5">
-              <h3 className="flex items-center text-lg font-bold">
+        <div className="sm:w-1/2 m-10">
+          <BarTitle title="About This Site" />
+          <div className="text-lg">
+            This site itself is a big project of mine. It was first built my first time using React and Nextjs. 
+            Since then, my skills have improved and it has been updated a few times reflecting those improved skills. 
+            This site is built with the following technologies:
+          </div>
+          <div className="mt-10 flex flex-col sm:flex-row gap-15 justify-center">  
+            <div className="flex flex-col items-center">
+              <h2 className="flex font-bold text-neon-teal items-center">
                 <FaCode className="mr-2" /> Frontend
-              </h3>
-              <ul className="list-disc px-10">
+              </h2>
+              <ul className="list-disc font-normal text-lg">
                 <li>React</li>
-                <li>Next.js</li>
-                <li>Tailwind CSS</li>
-                <li>HTML5</li>
+                <li>NextJs</li>
+                <li>TailwindCSS</li>
               </ul>
-            </section>
+            </div>
 
-            {/* backend */}
-            <section className="py-5">
-              <h3 className="flex items-center text-lg font-bold">
+            <div className="flex flex-col items-center">
+              <h2 className="flex font-bold text-neon-teal items-center">
                 <FaServer className="mr-2" /> Backend
-              </h3>
-              <ul className="list-disc px-10">
-                <li>Node.js</li>
+              </h2>
+              <ul className="list-disc font-normal text-lg">
+                <li>NextJs</li>
                 <li>PostgreSQL + Prisma</li>
                 <li>RESTful APIs</li>
               </ul>
+            </div>
 
-            </section>
-
-            {/* Production */}
-            <section className="py-5">
-              <h3 className="flex items-center text-lg font-bold">
+            <div className="flex flex-col items-center">
+              <h2 className="flex font-bold text-neon-teal items-center">
                 <FaClipboardCheck className="mr-2" /> Production
-              </h3>
-              <ul className="list-disc px-10">
+              </h2>
+              <ul className="list-disc font-normal text-lg">
                 <li>Vercel</li>
                 <li>Neon</li>
               </ul>
-            </section>
+            </div>
+          </div>
+        </div>
+        
 
-          </section>
-        </section>
+        
       </div>
-    </main>
+      
+
+    </div>
 
     {/* The Footer appears at the bottom */}
     <Footer />

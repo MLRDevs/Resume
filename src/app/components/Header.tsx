@@ -109,36 +109,5 @@ export default function Header({ page }: { page:string }) {
             
         </div>
     )
-
-
-    /*
-    return (
-        <header className="bg-navy-blue flex flex-col justify-center items-center">
-            <h1 className="text-6xl px-10 py-5 text-white">Alex Miller</h1>
-            <nav className="flex space-x-10 py-5">
-                
-                <Link href="/" title="Home">
-                    <FaHome size={32} color="white"/>
-                </Link>
-                
-                <Link href="/skills" title="Skills">
-                    <GiSkills size={32} color="white" />
-                </Link>
-
-                <Link href="/projects" title="Projects">
-                    <FaProjectDiagram size={32} color="white" />
-                </Link>
-
-                <Link href="/about" title="About Me">
-                    <CgProfile size={32} color="white" />
-                </Link>
-
-                <a href="/Miller_Alex_Resume.pdf" title="Resume PDF">
-                    <FaFile size={32} color="white" />
-                </a>
-            </nav>
-        </header>
-    );
-    */
 };
 
