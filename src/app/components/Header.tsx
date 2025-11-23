@@ -63,22 +63,22 @@ export default function Header({ page }: { page:string }) {
             <div className="bg-gray-900 flex flex-col justify-center items-center p-10">
                 
                 {/* small screens with icon */}
-                <div className="sm:hidden flex flex-row gap-10 justify-items items-center">
-                    <div className="text-ice-white text-xl font-bold">
+                <div className="sm:hidden flex flex-row gap-10 justify-items items-center text-4xl">
+                    <div className="text-ice-white font-bold">
                         Alex Miller
                     </div>
                     {menu 
                         ? (
                             <IoClose
                                 onClick={handleMenu}
-                                size={24}
+                                size={32}
                                 className="text-ice-white"
                             />
                         )
                         : (
                             <GiHamburgerMenu
                                 onClick={handleMenu}
-                                size={24}
+                                size={32}
                                 className="text-ice-white"
                             />
                         )
