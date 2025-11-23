@@ -14,10 +14,10 @@ export default function ProjectsPage() {
         <div>
             
             {/* header at top of the page */}
-            <Header />
+            <Header page="Projects"/>
 
             {/* main section */}
-            <main className="bg-black text-white">
+            <main className="bg-navy-blue text-white">
 
                 {/* Title */}
                 <section className="text-center items-center justify-center flex flex-col py-10">

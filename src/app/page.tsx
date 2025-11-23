@@ -15,10 +15,10 @@ const HomePage = () => (
   <div className="flex flex-col min-h-screen">
 
     {/* The Header appears at the top */}
-    <Header />
+    <Header page="Home" />
     
     {/* main container */}
-    <main className="bg-black text-white flex flex-col md:flex-row items-start items-center justify-center space-x-10 py-10 px-10">
+    <main className="bg-navy-blue text-white flex flex-col md:flex-row items-start items-center justify-center space-x-10 py-10 px-10">
 
       {/* image of me */}
       <div className="flex justify-center">

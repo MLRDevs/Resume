@@ -24,10 +24,10 @@ export default function AboutPage() {
             <Head>
                 <title>AM - About</title>
             </Head>
-            <div className="bg-black text-white min-h-screen flex flex-col">
+            <div className="bg-navy-blue text-white min-h-screen flex flex-col">
 
                 {/* Header at the top */}
-                <Header />
+                <Header page="About"/>
                 
                 {/* main container */}
                 <main className="flex flex-col md:flex-row justify-between px-6 py-10 gap-10 flex-1">

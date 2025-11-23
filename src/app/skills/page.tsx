@@ -19,10 +19,10 @@ export default function SkillsPage() {
         <div>
 
             {/* Header at the top */}
-            <Header />
+            <Header page="Skills"/>
             
             {/* Main container */}
-            <main className="bg-black text-white">
+            <main className="bg-navy-blue text-white">
 
                 {/* blurb about this page */}
                 <section className="text-center items-center justify-center flex flex-col py-10">
