@@ -110,7 +110,7 @@ const Timeline = () => {
     ]
 
     return (
-        <div className="w-110 md:w-150 2xl:w-full flex flex-col justify-center items-center gap-5">
+        <div className="w-80 md:w-150 2xl:w-full flex flex-col justify-center items-center gap-5">
 
             {/* dropdown menu */}
             <div className="mb-6">
@@ -129,7 +129,7 @@ const Timeline = () => {
 
 
             {/* Timeline */}
-            <ul className="h-75 m-5 overflow-y-auto w-100 md:w-150 2xl:w-full overflow-x-hidden">
+            <ul className="h-75 m-5 overflow-y-auto w-80 md:w-150 2xl:w-full overflow-x-hidden">
                 {filteritems.map((item,index) => (
                     <li key={index} className="mt-5 relative w-full overflow-x-auto">
                         <div className="flex items-center gap-3">
