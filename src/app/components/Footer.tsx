@@ -2,6 +2,7 @@
 // Footer for each page
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaRegFilePdf } from 'react-icons/fa6';
 import { MdEmail, MdPhone } from "react-icons/md";
 
 const Footer = () => {
@@ -21,6 +22,11 @@ const Footer = () => {
                 {/* email */}
                 <a href="mailto:milleral@nmu.edu">
                     <MdEmail size={32} color="white"/>
+                </a>
+
+                {/* resume */}
+                <a href="/Miller_Alex_Resume.pdf">
+                    <FaRegFilePdf size={32} color="white" />
                 </a>
             </div>
 

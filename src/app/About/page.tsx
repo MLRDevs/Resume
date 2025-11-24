@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import Timeline from '../components/Timeline';
 import Head from 'next/head';
 import dynamic from "next/dynamic";
+import BarTitle from '../components/BarTitle';
 
 
 const Map = dynamic(() => import("../components/Map"), {
@@ -28,50 +29,53 @@ export default function AboutPage() {
 
                 {/* Header at the top */}
                 <Header page="About"/>
-                
-                {/* main container */}
-                <main className="flex flex-col md:flex-row justify-between px-6 py-10 gap-10 flex-1">
 
-                    {/* map with points */}
-                    <section className="md:w-1/3">
+                <div className="flex flex-col gap-10 justify-center items-center m-10">
+
+                    <div className="flex flex-col sm:flex-row justify-center items-center gap-10 gap-10">
+
                         <Map />
-                    </section>
 
-                    {/* blurb on me and this page */}
-                    <section className="py-6 px-4 text-center">
-                        <div className="max-w-3xl mx-auto">
-                            <p className="text-left py-3">
-                                I began my academic journey at Calumet High School in Calumet, MI 
-                                learning the basics of HTML, CSS, Javascript, and Java. After moving
-                                to Ishpeming, MI and attending Westwood High School, I expanded my 
-                                interest in website development by creating more static web page projects
-                                and eventually graduating in 2019.
-                            </p>
-                            <p className="text-left py-3">
-                                I then went on to continue my studies of Computer Science at Northern
-                                Michigan University. Like many other schools, during 2020 
-                                NMU also went online thus I took a break in my education there. During that time, 
-                                I taught myself more topics such as C++ and memory management with pointers. I 
-                                then returned to NMU in Winter of 2022 and graduated with my Bachelor's of Science
-                                in Computer Science with a minor in Mathematics in May 2025.
-                            </p>
-                            <p className="text-left py-3">
-                                Currently, I am seeking opportunities to grow my skills and apply them to real
-                                world problems Whether that be in full stack, software engineering, or related
-                                areas. My goal is to be a part of a collaborative team building impactful 
-                                software solutions.
-                            </p>
+                        {/* blurb on me */}
+                        <div className="text-2xl sm:w-3/4 md:w-1/2">
+                            <BarTitle title="About Me" />
+                            <div className="text-left text-ice-white text-lg">
+                                I was born and raised in Calumet, MI. I've always been facinated with computers
+                                even at a young age. Growing up, I have fixed everything from an xbox and controllers 
+                                to tablets, phones, and laptops. I used to take apart our family desktop just to take a look 
+                                inside and see how everything works. Computer Science has just always been a thing I've 
+                                had a passion for. 
+                            </div>
                         </div>
-                    </section>
+                    </div>
 
+                    {/* continuation and list */}
+                    <div className="flex flex-col xl:flex-row gap-10 justify-center items-center">
+                        <div className="flex flex-col gap-5 xl:w-1/2">
+                            <div className="text-left text-ice-white text-lg">
+                                I even took that passion into projects not even about CS. For presentations in some classes where 
+                                I had the opportunity to use CS, I used it. Creating everything from simple programs to some websites 
+                                with basic HTML, CSS, and Javascript. They weren't great but they were sharpening my skills and I was 
+                                improving with each one.
+                            </div>
+                            <div className="text-left text-ice-white text-lg">
+                                After graduation of High School, I then went to Northern Michigan Univeristy to study Computer Science. 
+                                Once Covid hit, it did get tougher leading me to take some time off and then come back to Northern in Winter of 2022.
+                                In the time I wasn't at Northern, I spent it learning as much as I can. Once I took that break I instantly wanted to get 
+                                back as soon as I could. I spent that time learning more about C++ and Python.  
+                                I graduated in December of 2023 with my Associate's of Science and then in May 2025 with my Bachelor's of Science 
+                                in Computer Science with a minor in Mathematics. 
+                            </div> 
+                        </div>
 
-                    {/* timeline of work and school history */}
-                    <section className="md:w-1/3">
-                        <Timeline />
-                    </section>
-
-
-                </main>
+                        {/* list */}
+                        <div className="xl:w-1/2 text-2xl">
+                            <BarTitle title="History and Timeline" />
+                            <Timeline />
+                        </div>
+                    </div>
+                    
+                </div>
 
                 {/* Footer at the bottom */}
                 <Footer />

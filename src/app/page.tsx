@@ -43,6 +43,13 @@ const HomePage = () => (
               solving skills. Eager and ready to apply knowledge and skills towards complex 
               challenges building software solutions.
             </div>
+            <Link 
+              href='/Miller_Alex_Resume.pdf'
+              title="Resume"
+              className="p-2 rounded-xl text-lg font-bold mt-10 text-ice-white bg-blue-500 hover:bg-blue-600 active:bg-blue-700 transition"
+            >
+              Resume
+            </Link>
           </div>
         </div>
       </div>
