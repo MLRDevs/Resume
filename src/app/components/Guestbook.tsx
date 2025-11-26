@@ -122,7 +122,7 @@ const Guestbook = () => {
             </div>
 
             {/* table */}
-            <div className="border border-5 border-gray-900 rounded-xl">
+            <div className="m-5 border border-5 border-gray-900 rounded-xl">
                 <div className="m-5 text-ice-white h-50 overflow-y-scroll">
 
                     {/* table body */}
