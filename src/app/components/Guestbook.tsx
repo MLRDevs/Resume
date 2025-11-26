@@ -4,11 +4,13 @@
 'use client'
 
 import { useEffect, useState } from 'react';
+import { ErrorAlert } from './Alerts';
 
 const Guestbook = () => {
 
     const [users, setUsers] = useState<{ name: string; email: string; company: string }[]>([]);
     const [formdata, setFormdata] = useState({ name: '', email: '', company: ''});
+    const [errors, setErrors] = useState<{ [key:string]:boolean}>({});
 
     const fetchUsers = async () => {
         try {
@@ -33,6 +35,22 @@ const Guestbook = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        // set the errors
+        const newErrors: { [key:string]:boolean } = {};
+
+        if (!formdata.email) newErrors.email = true;
+        if (!formdata.company) newErrors.company = true;
+        if (!formdata.name) newErrors.name = true;
+
+        setErrors(newErrors);
+
+        if (Object.keys(newErrors).length > 0) {
+            ErrorAlert('Must enter all fields');
+            return;
+        }        
+
+
         await fetch('/api/users', {
             method: 'POST',
             headers: {
@@ -44,72 +62,82 @@ const Guestbook = () => {
         fetchUsers();
     };
 
+    const inputClass = (field: string) => {
+        return `text-icy-blue px-2 rounded-md border border-gray-300 focus:outline-none focus:ring-3 focus:border-none ${errors[field] ? 'border-red-500 ring-red-500' : 'focus-ring-blue-500'}`;
+    }
+
     return (
-        <div className="py-5">
+        <div className="py-5 flex flex-col sm:flex-row gap-10 items-center">
 
             {/* form to add */}
-            <div>
-                <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-x-3 py-2 gap-y-3 items-center justify-center">
-                    <label>Name</label>
-                    <input 
-                        placeholder="First Last" 
-                        className="border border-white rounded-xl placeholder:px-1 text-center"
-                        type="text"
-                        value={formdata.name}
-                        required
-                        onChange={(e) => setFormdata({ ...formdata, name: e.target.value })}
-                    />
-                    
-                    <label>Email</label>
-                    <input 
-                        placeholder="you@example.com" 
-                        className="border border-white rounded-xl placeholder:px-1 text-center"
-                        type="email"
-                        value={formdata.email}
-                        required
-                        onChange={(e) => setFormdata({ ...formdata, email: e.target.value })}
-                    />
-                    <label>Company / Location</label>
-                    <input 
-                        placeholder="Company X at Y" 
-                        className="border border-white rounded-xl placeholder:px-1 text-center"
-                        type="text"
-                        value={formdata.company}
-                        required
-                        onChange={(e) => setFormdata({ ...formdata, company: e.target.value })}
-                    />
+            <div className="flex flex-col gap-5 items-center">
+                <form className="py-10 flex flex-col items-center gap-5" onSubmit={handleSubmit}>
+                    <div className="flex flex-col justify-center items-center gap-5">
+                        
+                        {/* name */}
+                        <div className="flex flex-col items-center gap-2">
+                            <label className="text-neon-teal font-bold text-lg">Name</label>
+                            <input
+                                type="text"
+                                value={formdata.name}
+                                onChange={(e) => setFormdata({ ...formdata, name: e.target.value })}
+                                placeholder="first last"
+                                className={inputClass('name')}
+                            />
+                        </div>
+                        
+                        {/* email */}
+                        <div className="flex flex-col items-center gap-2">
+                            <label className="text-neon-teal font-bold text-lg">Email</label>
+                            <input
+                                type="text"
+                                value={formdata.email}
+                                onChange={(e) => setFormdata({ ...formdata, email: e.target.value })}
+                                placeholder="you@example.com"
+                                className={inputClass('email')}
+                            />
+                        </div>
 
-                    <div className="flex items-center justify-center px-2">
-                        <button type="submit" className="bg-green-500 text-black text-lg w-25 rounded-xl hover:bg-green-600">Add</button>
+                        {/* company / location */}
+                        <div className="flex flex-col items-center gap-2">
+                            <label className="text-neon-teal font-bold text-lg">Company / Location </label>
+                            <input
+                                type="text"
+                                value={formdata.company}
+                                onChange={(e) => setFormdata({ ...formdata, company: e.target.value })}
+                                placeholder="company X at Y"
+                                className={inputClass('company')}
+                            />
+                        </div>
                     </div>
+
+                    {/* submission */}
+                    <button
+                        type="submit"
+                        className="p-1 rounded-xl text-ice-white font-bold bg-green-500 hover:bg-green-600 active:bg-green-700 transition"
+                    >
+                        Submit
+                    </button>
                 </form>
-                
             </div>
 
             {/* table */}
-            <div className="flex items-center justify-center py-5 rounded-xl shadow-lg">
-                <table className="rounded-lg shadow-md text-white">
-                    {/* Table Header */}
-                    <thead className="bg-gray-900">
-                        <tr>
-                            <th className="px-4 py-2">Name</th>
-                            <th className="px-4 py-2">Email</th>
-                            <th className="px-4 py-2">Company / Location</th>
-                        </tr>
-                    </thead>
+            <div className="border border-5 border-gray-900 rounded-xl">
+                <div className="m-5 text-ice-white h-50 overflow-y-scroll">
 
-                    {/* Table Body */}
-                    <tbody>
-                        {users.map((user: any) => (
-                            <tr key={user.id} className="border-t border-gray-700">
-                                <td className="px-4 py-2">{user.name}</td>
-                                <td className="px-4 py-2">{user.email}</td>
-                                <td className="px-4 py-2">{user.company}</td>
-                            </tr>
+                    {/* table body */}
+                    <div className="flex flex-col gap-3 m-5">
+                        {users.map((user:any) => (
+                            <div key={user.id} className="flex flex-col gap-1 text-center border rounded-xl border-icy-blue">
+                                <p className="px-4 py-2 font-bold text-lg text-neon-teal">{user.name}</p>
+                                <p className="px-4 py-2">{user.email}</p>
+                                <p className="px-4 py-2">{user.company}</p>
+                            </div>
                         ))}
-                    </tbody>
-                </table>
+                    </div>
+                </div>
             </div>
+            
         </div>
     )
 }

@@ -15,25 +15,25 @@ const Sorts = () => {
 
 
     return (
-        <div className="flex flex-col justify-center items-center md:flex-row">
+        <div className="py-10 flex flex-col items-center md:flex-row">
 
-            {/* container holding keys and array for mobile */}
-            <div className="flex flex-row w-full gap-x-10 md:w-1/3">
+            {/* container holding keys and array */}
+            <div className="flex flex-row items-center gap-10">
                 
                 {/* keys */}
-                <div className="font-bold px-5 py-5 text-center">
-                    <ul>
-                        <li className="text-red-500">Unsorted</li>
-                        <li className="text-blue-500">Selected</li>
-                        <li className="text-yellow-500">Swapping / Writing</li>
-                        <li className="text-green-500">Sorted</li>
-                        <li className="text-pink-500">Top Half</li>
-                        <li className="text-gray-500">Bottom Half</li>
+                <div className="font-bold px-5 py-5 text-ice-white text-center">
+                    <ul className="flex flex-col gap-2">
+                        <li className="bg-red-500 rounded-xl p-1">Unsorted</li>
+                        <li className="bg-blue-500 rounded-xl p-1">Selected</li>
+                        <li className="bg-yellow-500 rounded-xl p-1">Swapping / Writing</li>
+                        <li className="bg-green-500 rounded-xl p-1">Sorted</li>
+                        <li className="bg-pink-500 rounded-xl p-1">Top Half</li>
+                        <li className="bg-gray-500 rounded-xl p-1">Bottom Half</li>
                     </ul>
                 </div>
 
                 {/* array */}
-                <div className="font-bold w-1/3 md:w-1/3 text-xl">
+                <div className="font-bold text-xl">
                     {arr.map((val,i) => {
                         let color = 'bg-red-500';
 
@@ -49,7 +49,10 @@ const Sorts = () => {
                             <div
                                 key={i}
                                 className= {
-                                    `${color} text-white flex justify-center`
+                                    `${color} text-white flex justify-center pl-5 pr-5
+                                     ${i === 0 ? 'rounded-t-xl' : ''}
+                                     ${i === 8 ? 'rounded-b-xl' : ''}
+                                    `
                                 }
                             >
                                 {val}
@@ -62,7 +65,7 @@ const Sorts = () => {
 
             
             {/* buttons for sorts */}
-            <div className="flex flex-col py-10 px-10 gap-y-4 font-bold w-full md:w-1/3">
+            <div className="w-full flex flex-col py-10 px-10 gap-y-4 font-bold">
                 <button 
                     className="rounded-xl border-2 border-white bg-gray-900 text-white py-1 px-1"
                     onClick={() => {

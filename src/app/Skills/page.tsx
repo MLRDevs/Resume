@@ -7,6 +7,7 @@ import Codes from '../components/Codes';
 import Guestbook from '../components/Guestbook';
 import Tree from '../components/Tree';
 import Sorts from '../components/Sorts';
+import BarTitle from '../components/BarTitle';
 
 export const metadata = {
     title: 'AM - Skills'
@@ -16,108 +17,74 @@ export const metadata = {
 export default function SkillsPage() {
 
     return (
-        <div>
+        <div className="bg-navy-blue text-ice-white min-h-screen flex flex-col">
 
             {/* Header at the top */}
             <Header page="Skills"/>
-            
-            {/* Main container */}
-            <main className="bg-navy-blue text-white">
 
-                {/* blurb about this page */}
-                <section className="text-center items-center justify-center flex flex-col py-10">
-                    <p className="w-full px-10 md:w-1/2 text-xl py-3">
-                        Interactive section visually displaying my skill set and abilities to use my
-                        Computer Science knowledge into real world applications. 
-                    </p>
-                    <div className="h-1 w-1/2 bg-gradient-to-r from-blue-500 to-purple-500 rounded"></div>
-                </section>
+            <div className="flex flex-col justify-center items-center m-10 gap-10">
 
-                {/* languages with code blocks */}
-                <section className="py-10">
+                <div className="flex flex-col md:flex-row gap-5">
 
-                    {/* Title */}                    
-                    <h1 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
-                        Program Examples
-                        <p className="text-lg text-gray-500 md:max-w-1/2">
-                            Demonstrates fundamental Computer Science concepts and techniques 
-                            in different languages. The Java and C++ examples were assignments
-                            completed during my time at Northern Michigan University. Each file 
-                            in the code block contains a description of what the program does.
-                        </p>
-                    </h1>
+                    {/* title */}
+                    <div className="md:w-1/2 flex flex-col items-center gap-5">
+                        <div className="text-2xl w-full">
+                            <BarTitle title="Skills" />
+                        </div>
 
-                    {/* Code blocks */}
-                    <div className="py-10">
-                        <Codes />
+                        <div className="text-lg text-ice-white">
+                            This is an interactive section that showcases my skills. I figured instead 
+                            of a list of all my skills, I can physically 
+                            <em className="text-icy-blue"> show </em> 
+                            them. This in turn not only proves I have these skills, but is also just a fun thing to showcase.
+                        </div>
                     </div>
 
-                </section>
-
-                {/* Guest book MySql, Next.js, Node.js, Prisma */}
-                <section className="py-10">
-
-                    {/* Title */}                    
-                    <h1 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
-                        Guestbook
-                        <p className="text-lg text-gray-500 md:max-w-1/2">
-                            A full stack Guestbook application built from Next.js, TailwindCSS, and Neon. Users
-                            can enter their name, email, and company/location which are stored into
-                            a PostgreSQL database. This project deepended my understanding of full stack applications
-                            with database integration via API routes.
-                        </p>
-                    </h1>
-
-                    {/* Guessbook Table */}
-                    <div>
-                        <Guestbook />
+                    {/* guestbook */}
+                    <div className="md:w-1/2 flex flex-col items-center gap-5">
+                        <div className="text-2xl w-full">
+                            <BarTitle title="Guestbook" />
+                        </div>
+                        <div className="text-lg text-ice-white">
+                            This is the Guestbook. There is a form you can fill out and it will 
+                            be placed into the PostgreSQL Database and displayed here in the 
+                            table. This is a kind of way to mark that you've visited this page 
+                            and took a look around. Also displays my backend skills with RESTful APIs.
+                        </div>
                     </div>
 
-                </section>
+                </div>
 
-                
+                <Guestbook />
 
-                {/* Trees */}
-                <section className="py-10">
-
-                    {/* Title */}
-                    <h1 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
-                        Trees
-                        <p className="text-lg text-gray-500 md:max-w-1/2">
-                            Visualizes tree traversal algorithms. These give a deeper
-                            understanding into recursion and other data structures such as 
-                            linked lists.
-                        </p>
-                    </h1>
-
-                    {/* tree structure */}
-                    <div>
-                        <Tree />
+                {/* Algorithms */}
+                <div className="w-full">
+                    <div className="text-2xl w-full">
+                        <BarTitle title="Algorithms" />
                     </div>
 
-                </section>
+                    <div className="flex flex-col justify-center xl:flex-row gap-5">
 
+                        {/* trees */}
+                        <div className="xl:w-1/2 flex flex-col gap-3 items-center">
+                            <h3 className="w-1/2 text-center bg-gradient-to-r from-pale-green to-neon-teal font-bold text-xl text-black p-5 rounded-xl">Trees</h3>
+                            <div className="">
+                                <Tree />
+                            </div>
+                        </div>
 
-                {/* Sorting */}
-                <section className="py-10">
-
-
-                    {/* Title */}
-                    <h1 className="text-2xl font-semibold border-l-7 border-blue-500 pl-4 mb-4">
-                        Sorting
-                        <p className="text-lg text-gray-500 md:max-w-1/2">
-                            Demonstrates different sorting algorithms on arrays. These algorithms
-                            are crucial for the next step which would be binary search.
-                        </p>
-                    </h1>
-
-                    {/* Sorting arrays */}
-                    <div className="py-10">
-                        <Sorts />
+                        {/* Sorting */}
+                        <div className="xl:w-1/2 flex flex-col gap-3 items-center">
+                            <h3 className="w-1/2 text-center bg-gradient-to-r from-pale-green to-neon-teal font-bold text-xl text-black p-5 rounded-xl">Sorting</h3>
+                            <div className="">
+                                <Sorts />
+                            </div>
+                        </div>
                     </div>
+                    
+                </div>
 
-                </section>
-            </main>
+            </div>
 
             {/* Footer at the bottomn */}
             <Footer />

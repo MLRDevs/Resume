@@ -15,15 +15,15 @@ const RenderTree = ({node, current, visited, queued}: Props) => {
     if (!node) return null;
 
     const statusClass = current === node.name
-        ? 'text-blue-500'
+        ? 'bg-blue-500 text-ice-white p-1'
         : visited.includes(node.name)
-        ? 'text-green-500'
+        ? 'bg-green-500 text-ice-white p-1'
         : queued.includes(node.name)
-        ? 'text-yellow-500'
-        : 'text-red-500';
+        ? 'bg-yellow-500 text-ice-white p-1'
+        : 'bg-red-500 text-ice-white p-1';
 
     return (
-        <li className="relative text-center text-lg font-bold">
+        <li className="relative text-center text-xl font-bold">
             <div className={`inline-block p-2 rounded-full ${statusClass}`}>{node.name}</div>
             {(node.left || node.right) && (
                 <ul className="flex justify-center space-x-6 mt-4">
