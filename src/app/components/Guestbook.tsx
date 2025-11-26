@@ -122,8 +122,8 @@ const Guestbook = () => {
             </div>
 
             {/* table */}
-            <div className="m-5 border border-5 border-gray-900 rounded-xl">
-                <div className="m-5 text-ice-white h-50 overflow-y-scroll">
+            <div className="border border-5 border-gray-900 rounded-xl">
+                <div className="m-2 text-ice-white h-50 overflow-y-scroll">
 
                     {/* table body */}
                     <div className="flex flex-col gap-3 m-5">
