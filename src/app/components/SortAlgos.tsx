@@ -142,8 +142,8 @@ export const QS = async(
             setStatus([...status]);
             await delay(700);
 
-            await QuickSort(low, p-1); // before pivot
-            await QuickSort(p+1, high); // after pivot
+            QuickSort(low, p-1); // before pivot
+            QuickSort(p+1, high); // after pivot
         });
     }
 
@@ -216,7 +216,7 @@ export const QS = async(
     // run 
     await QuickSort(0, array.length-1);
 
-    await delay(700);
+    await delay(25000);
     status.fill('default');
     setStatus([...status]);
     setArr([5,2,9,1,6,3,8,4,7]);
@@ -313,7 +313,7 @@ export const MG = async (
     // show everything as sorted
     await mergeSort(0,array.length - 1);
     setStatus(Array(array.length).fill('sorted'));
-
+    
     // reset everything
     await delay(700);
     status.fill('default');
