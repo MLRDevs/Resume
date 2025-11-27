@@ -121,6 +121,110 @@ export const SS = async (
 
 }
 
+// Quick Sort
+export const QS = async(
+    arr: number[],
+    setArr: (a: number[]) => void,
+    setStatus: (s: string[]) => void,
+    onFinish: () => void, 
+) => {
+
+    // arrays and delay
+    const array = [...arr];
+    const status = Array(arr.length).fill('default');
+    const delay = (ms: number) => new Promise(res => setTimeout(res,ms));
+
+    const QuickSort = async (low: number, high: number) => {
+        if (low > high) return;
+
+        await Partition(low,high).then(async (p:number) => {
+            status[p] = 'sorted';
+            setStatus([...status]);
+            await delay(700);
+
+            await QuickSort(low, p-1); // before pivot
+            await QuickSort(p+1, high); // after pivot
+        });
+    }
+
+    // sort from pivot element, return pivot
+    const Partition = async (low: number, high: number):Promise<number> => {
+
+        // base case, only one element
+        if (low === high) return low;
+
+        // get the pivot
+        let pivot = array[high];
+        status[high] = 'pivot';
+        setStatus([...status]);
+        await delay(500);
+        
+        // select i
+        let i = low;
+        status[i] = 'active';
+        setStatus([...status]);
+        delay(500);
+
+        for (let j=low; j <= high; j++) {
+
+            // select i
+            status[i] = 'active';
+            setStatus([...status]);
+            await delay(500);
+            
+            // select j
+            status[j] = 'active';
+            setStatus([...status]);
+            await delay(500);
+
+            // j less or equal to pivot
+            if (array[j] <= pivot) {
+                
+                // swap, increment, next j
+
+                status[i] = 'swapped';
+                status[j] = 'swapped';
+                setStatus([...status]);
+                await delay(500);
+
+                // swap
+                let temp = array[j];
+                array[j] = array[i];
+                array[i] = temp;
+                setArr([...array]);
+
+                // back to default
+                status[i] = 'default';
+                status[j] = 'active';
+                setStatus([...status]);
+                await delay(500);
+
+                // increment
+                i++;
+            }
+
+            // deselect j
+            status[j] = 'default';
+            setStatus([...status]);
+            delay(500);
+        }
+
+        // return pivot
+        return i-1;
+    }
+
+    // run 
+    await QuickSort(0, array.length-1);
+
+    await delay(700);
+    status.fill('default');
+    setStatus([...status]);
+    setArr([5,2,9,1,6,3,8,4,7]);
+
+    onFinish();
+    
+}
+
 // Merge Sort
 export const MG = async (
     arr: number[],

@@ -66,7 +66,9 @@ const Tree = () => {
                 <div className="flex flex-col px-10 py-10 gap-y-4 font-bold w-full">
                     <button 
                         disabled={disabled}
-                        className="rounded-xl border-2 border-white bg-gray-900 text-white py-1 px-1"
+                        className={`rounded-xl border-2 border-white text-white py-1 px-1
+                            ${disabled ? 'bg-gray-600' : 'bg-gray-900' }    
+                        `}
                         onClick={async () => {
                             setDisabled(true);
                             setVisited([]);
@@ -80,7 +82,9 @@ const Tree = () => {
                     </button>
                     <button 
                         disabled={disabled}
-                        className="rounded-xl border-2 border-white bg-gray-900 text-white py-1 px-1"
+                        className={`rounded-xl border-2 border-white text-white py-1 px-1
+                            ${disabled ? 'bg-gray-600' : 'bg-gray-900' }    
+                        `}
                         onClick={async () => {
                             setDisabled(true);
                             setVisited([]);
@@ -96,7 +100,9 @@ const Tree = () => {
                     </button>
                     <button
                         disabled={disabled} 
-                        className="rounded-xl border-2 border-white bg-gray-900 text-white py-1 px-1"
+                        className={`rounded-xl border-2 border-white text-white py-1 px-1
+                            ${disabled ? 'bg-gray-600' : 'bg-gray-900' }    
+                        `}
                         onClick={async () => {
                             setDisabled(true);
                             setVisited([]);
@@ -111,7 +117,9 @@ const Tree = () => {
                     </button>
                     <button 
                         disabled={disabled}
-                        className="rounded-xl border-2 border-white bg-gray-900 text-white py-1 px-1"
+                        className={`rounded-xl border-2 border-white text-white py-1 px-1
+                            ${disabled ? 'bg-gray-600' : 'bg-gray-900' }    
+                        `}
                         onClick={async () => {
                             setDisabled(true);
                             setVisited([]);
