@@ -39,9 +39,9 @@ const HomePage = () => (
           <div className="flex flex-col justify-center items-center">
             <BarTitle title="Software Engineer" />
             <div className="text-ice-white text-xl">
-              I'm an Ambitious and adaptable individual with strong communication and problem
-              solving skills. Eager and ready to apply knowledge and skills towards complex 
-              challenges building software solutions.
+              Computer Science graduate with hands-on experience building and deploying full stack applications 
+	across multiple technology stacks. Eager to apply my proven adaptability, communication, and teamwork 
+	skills to build meaningful software.
             </div>
             <Link 
               href='/Miller_Alex_Resume.pdf'
