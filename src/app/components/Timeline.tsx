@@ -23,7 +23,7 @@ const Timeline = () => {
         { type: 'Languages', title: 'Python', date: '2021' },
         { type: 'Languages', title: 'Smalltalk', date: '2024' },
         { type: 'Languages', title: 'Assembly', date: '2024' },
-        { type: 'Languages', title: 'Kotlin', data: '2024'}
+        { type: 'Languages', title: 'Kotlin', data: '2024'},
 
         { type: 'Web Development', title: 'HTML', date: '2015' },
         { type: 'Web Development', title: 'CSS', date: '2015' },
