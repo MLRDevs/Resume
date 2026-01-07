@@ -40,8 +40,8 @@ const HomePage = () => (
             <BarTitle title="Software Engineer" />
             <div className="text-ice-white text-xl">
               Computer Science graduate with hands-on experience building and deploying full stack applications 
-	across multiple technology stacks. Eager to apply my proven adaptability, communication, and teamwork 
-	skills to build meaningful software.
+	            across multiple technology stacks. Eager to apply my proven adaptability, communication, and teamwork 
+	            skills to build meaningful software.
             </div>
             <Link 
               href='/Miller_Alex_Resume.pdf'
@@ -92,7 +92,7 @@ const HomePage = () => (
               </h2>
               <ul className="list-disc font-normal text-lg">
                 <li>React</li>
-                <li>NextJs</li>
+                <li>Next.js</li>
                 <li>TailwindCSS</li>
               </ul>
             </div>
@@ -102,7 +102,7 @@ const HomePage = () => (
                 <FaServer className="mr-2" /> Backend
               </h2>
               <ul className="list-disc font-normal text-lg">
-                <li>NextJs</li>
+                <li>Next.js</li>
                 <li>PostgreSQL + Prisma</li>
                 <li>RESTful APIs</li>
               </ul>
