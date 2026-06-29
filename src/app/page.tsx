@@ -78,7 +78,7 @@ const HomePage = () => (
           </div>
         </div>
 
-        <div className="sm:w-1/2 m-10">
+        <div className="text-ice-white sm:w-1/2 m-10">
           <BarTitle title="About This Site" />
           <div className="text-lg">
             This site itself is a big project of mine. It was first built my first time using React and Nextjs. 
