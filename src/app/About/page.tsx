@@ -50,7 +50,7 @@ export default function AboutPage() {
                     </div>
 
                     {/* continuation and list */}
-                    <div className="gap-10 m-10 justify-center items-center md:w-[80%] w-full">
+                    <div className="gap-10 justify-center items-center md:w-[80%] w-full">
                         <div className="flex flex-col gap-5">
                             <div className="text-left text-ice-white text-lg">
                                 I even took that passion into projects not even about CS. For presentations in some classes where 
