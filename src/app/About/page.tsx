@@ -32,7 +32,7 @@ export default function AboutPage() {
 
                 <div className="flex flex-col gap-10 justify-center items-center m-10">
 
-                    <div className="flex flex-col sm:flex-row justify-center items-center gap-10 gap-10">
+                    <div className="flex flex-col sm:flex-row justify-center items-center gap-10">
 
                         <Map />
 
@@ -50,22 +50,20 @@ export default function AboutPage() {
                     </div>
 
                     {/* continuation and list */}
-                    <div className="gap-10 justify-center items-center md:w-[80%] w-full">
-                        <div className="flex flex-col gap-5">
-                            <div className="text-left text-ice-white text-lg">
-                                I even took that passion into projects not even about CS. For presentations in some classes where 
-                                I had the opportunity to use CS, I used it. Creating everything from simple programs to some websites 
-                                with basic HTML, CSS, and Javascript. They weren't great but they were sharpening my skills and I was 
-                                improving with each one.
-                            </div>
-                            <div className="text-left text-ice-white text-lg">
-                                After graduation of High School, I then went to Northern Michigan Univeristy to study Computer Science. 
-                                Once Covid hit, it did get tougher leading me to take some time off and then come back to Northern in Winter of 2022.
-                                In the time I wasn't at Northern, I spent it learning as much as I can. Once I took that break I instantly wanted to get 
-                                back as soon as I could. I spent that time learning more about C++ and Python.  
-                                I graduated in December of 2023 with my Associate's of Science and then in May 2025 with my Bachelor's of Science 
-                                in Computer Science with a minor in Mathematics. 
-                            </div>
+                    <div className="flex flex-col justify-center items-center gap-10 sm:w-4/5">
+                        <div className="text-left text-ice-white text-lg">
+                            I even took that passion into projects not even about CS. For presentations in some classes where 
+                            I had the opportunity to use CS, I used it. Creating everything from simple programs to some websites 
+                            with basic HTML, CSS, and Javascript. They weren't great but they were sharpening my skills and I was 
+                            improving with each one.
+                        </div>
+                        <div className="text-left text-ice-white text-lg">
+                            After graduation of High School, I then went to Northern Michigan Univeristy to study Computer Science. 
+                            Once Covid hit, it did get tougher leading me to take some time off and then come back to Northern in Winter of 2022.
+                            In the time I wasn't at Northern, I spent it learning as much as I can. Once I took that break I instantly wanted to get 
+                            back as soon as I could. I spent that time learning more about C++ and Python.  
+                            I graduated in December of 2023 with my Associate's of Science and then in May 2025 with my Bachelor's of Science 
+                            in Computer Science with a minor in Mathematics. 
                         </div>
                     </div>
                     

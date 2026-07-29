@@ -40,7 +40,7 @@ export default function SkillsPage() {
                             them. This in turn not only proves I have these skills, but is also just a fun thing to showcase.
                         </div>
                         <div className="text-lg text-ice-white">
-                            On the right, you will see a list of my skills organized by topic. This also includes 
+                            On the right/below, you will see a list of my skills organized by topic. This also includes 
                             my work history and any certifications and that kind of stuff. They also have relative 
                             dates from when I learned those skills except for soft skills. You can use the dropdown
                             on the top to filter for a specific topic.
