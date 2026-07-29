@@ -39,9 +39,9 @@ const HomePage = () => (
           <div className="flex flex-col justify-center items-center">
             <BarTitle title="Software Engineer" />
             <div className="text-ice-white text-xl">
-              Computer Science graduate with hands-on experience building and deploying full stack applications 
-	            across multiple technology stacks. Eager to apply my proven adaptability, communication, and teamwork 
-	            skills to build meaningful software.
+              Computer Science graduate with professional experience in biometric quality assurance and a strong foundation 
+              in software engineering. Skilled in software development, full-stack engineering, adapting to complex systems, 
+              and technical troubleshooting with interests in cybersecurity.
             </div>
             <Link 
               href='/Miller_Alex_Resume.pdf'
@@ -55,7 +55,7 @@ const HomePage = () => (
       </div>
 
       {/* sections */}
-      <div className="flex flex-col justify-center items-center gap-10 text-left text-2xl mt-10">
+      <div className="flex flex-col xl:flex-row justify-center items-center xl:items-start gap-10 text-left text-2xl mt-10">
         
         <div className="sm:w-1/2 m-10">
           <BarTitle title="Quick Facts About Me" />

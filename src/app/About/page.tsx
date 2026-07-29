@@ -50,8 +50,8 @@ export default function AboutPage() {
                     </div>
 
                     {/* continuation and list */}
-                    <div className="flex flex-col xl:flex-row gap-10 justify-center items-center">
-                        <div className="flex flex-col gap-5 xl:w-1/2">
+                    <div className="gap-10 m-10 justify-center items-center md:w-[80%] w-full">
+                        <div className="flex flex-col gap-5">
                             <div className="text-left text-ice-white text-lg">
                                 I even took that passion into projects not even about CS. For presentations in some classes where 
                                 I had the opportunity to use CS, I used it. Creating everything from simple programs to some websites 
@@ -65,13 +65,7 @@ export default function AboutPage() {
                                 back as soon as I could. I spent that time learning more about C++ and Python.  
                                 I graduated in December of 2023 with my Associate's of Science and then in May 2025 with my Bachelor's of Science 
                                 in Computer Science with a minor in Mathematics. 
-                            </div> 
-                        </div>
-
-                        {/* list */}
-                        <div className="xl:w-1/2 text-2xl">
-                            <BarTitle title="History and Timeline" />
-                            <Timeline />
+                            </div>
                         </div>
                     </div>
                     

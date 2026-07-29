@@ -17,8 +17,8 @@ const Map = () => {
         <div className="">
             <MapContainer 
                 key={typeof window !== "undefined" ? window.location.pathname: 'MAP'}
-                center={[46.558907,-87.406202]} 
-                zoom={7} 
+                center={[42.324481,-95.917046]} 
+                zoom={4} 
                 scrollWheelZoom={true}
                 className="h-100 w-80 rounded-lg shadow-md"
                 >
@@ -65,6 +65,16 @@ const Map = () => {
                         <div className="flex">
                             <FaGraduationCap size={16} />
                             <h3 className="px-2">Northern Michigan University</h3>
+                        </div>
+                    </Popup>
+                </Marker>
+
+                {/* iBeta */}
+                <Marker position={[39.668652,-104.828886]}>
+                    <Popup>
+                        <div className="flex">
+                            <FaBriefcase size={16} />
+                            <h3 className="px-2">iBeta Quality Assurance</h3>
                         </div>
                     </Popup>
                 </Marker>

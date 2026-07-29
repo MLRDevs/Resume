@@ -54,7 +54,7 @@ const Timeline = () => {
         { type: 'Concepts', title: 'Data Structures', date: '2022' },
         { type: 'Concepts', title: 'Networking', date: '2022' },
         { type: 'Concepts', title: 'Agile Development', date: '2024' },
-        { type: 'Concepts', title: 'Rest APIs', date: '2024' },
+        { type: 'Concepts', title: 'REST APIs', date: '2024' },
         { type: 'Concepts', title: 'Dynamic Programming', date: '2024' },
         { type: 'Concepts', title: 'Algorithms', date: '2024' },
         { type: 'Concepts', title: 'SaaS / PaaS', date: '2025' },
@@ -72,11 +72,12 @@ const Timeline = () => {
 
         { type: 'Education', title: 'Calumet High School', date: 'Sep 2015 - June 2018' },
         { type: 'Education', title: 'Westwood High School ~ Diploma', date: 'Sep 2018 - May 2019' },
-        { type: 'Education', title: 'Associate\'s of Science', date: 'Northern Michigan University, Graduated: Dec 2023' },
-        { type: 'Education', title: 'Bachelor\'s of Science ~ Computer Science, Minor in Mathematics', date: 'Northern Michigan University, Graduated: May 2025' },
+        { type: 'Education', title: 'A.S of Science, General Education', date: 'Northern Michigan University | Graduated: Dec 2023' },
+        { type: 'Education', title: 'B.S of Science, Computer Science minor in Mathematics', date: 'Northern Michigan University | Graduated: May 2025' },
 
 
-        { type: 'Work', title: 'Isle Royale Ferry Line', date: 'Summers 2022-2025'},
+        { type: 'Work', title: 'Isle Royale Ferry Line', role: 'Crew Member', date: 'Summers 2022-2025'},
+        { type: 'Work', title: 'iBeta Quality Assurance', role: 'Biometrics Tester', date: 'March 2026 - present'},
 
         { type: 'Awards', title: 'Michigan Governor\'s High School Cyber Challenge', date: '2018' },
 
@@ -137,7 +138,10 @@ const Timeline = () => {
                             <span className="text-xl">{iconmap[item.type]}</span>
                             <p className=" font-bold capitalize">{item.title}</p>
                         </div>
-                        <p className="text-sm text-gray-500">{item.date}</p>
+                        {item.role
+                            ? <p className="text-sm text-gray-500">{item.role} | {item.date} </p>
+                            : <p className="text-sm text-gray-500">{item.date}</p>
+                        }
                     </li>
                 ))}
             </ul>

@@ -5,6 +5,7 @@
 
 import { useEffect, useState } from 'react';
 import { ErrorAlert } from './Alerts';
+import BarTitle from './BarTitle';
 
 const Guestbook = () => {
 
@@ -67,75 +68,92 @@ const Guestbook = () => {
     }
 
     return (
-        <div className="py-5 flex flex-col sm:flex-row gap-10 items-center">
+        <div className="py-5 flex flex-col xl:flex-row gap-10 items-center">
 
-            {/* form to add */}
-            <div className="flex flex-col gap-5 items-center">
-                <form className="py-10 flex flex-col items-center gap-5" onSubmit={handleSubmit}>
-                    <div className="flex flex-col justify-center items-center gap-5">
-                        
-                        {/* name */}
-                        <div className="flex flex-col items-center gap-2">
-                            <label className="text-neon-teal font-bold text-lg">Name</label>
-                            <input
-                                type="text"
-                                value={formdata.name}
-                                onChange={(e) => setFormdata({ ...formdata, name: e.target.value })}
-                                placeholder="first last"
-                                className={inputClass('name')}
-                            />
-                        </div>
-                        
-                        {/* email */}
-                        <div className="flex flex-col items-center gap-2">
-                            <label className="text-neon-teal font-bold text-lg">Email</label>
-                            <input
-                                type="text"
-                                value={formdata.email}
-                                onChange={(e) => setFormdata({ ...formdata, email: e.target.value })}
-                                placeholder="you@example.com"
-                                className={inputClass('email')}
-                            />
-                        </div>
-
-                        {/* company / location */}
-                        <div className="flex flex-col items-center gap-2">
-                            <label className="text-neon-teal font-bold text-lg">Company / Location </label>
-                            <input
-                                type="text"
-                                value={formdata.company}
-                                onChange={(e) => setFormdata({ ...formdata, company: e.target.value })}
-                                placeholder="company X at Y"
-                                className={inputClass('company')}
-                            />
-                        </div>
-                    </div>
-
-                    {/* submission */}
-                    <button
-                        type="submit"
-                        className="p-1 rounded-xl text-ice-white font-bold bg-green-500 hover:bg-green-600 active:bg-green-700 transition"
-                    >
-                        Submit
-                    </button>
-                </form>
+            {/* blurb */}
+            <div className="flex flex-col items-center gap-5 w-full xl:w-1/3">
+                <div className="text-2xl w-full">
+                    <BarTitle title="Guestbook" />
+                </div>
+                <div className="text-lg text-ice-white">
+                    This is the Guestbook. There is a form you can fill out and it will 
+                    be placed into the PostgreSQL Database and displayed here in the 
+                    table. This is a kind of way to mark that you've visited this page 
+                    and took a look around. Also displays my backend skills with RESTful APIs.
+                </div>
             </div>
 
-            {/* table */}
-            <div className="border border-5 border-gray-900 rounded-xl">
-                <div className="m-2 text-ice-white h-50 overflow-y-scroll">
+            <div className="flex flex-col md:flex-row w-full xl:w-2/3 gap-5 items-center">
 
-                    {/* table body */}
-                    <div className="flex flex-col gap-3 m-5">
-                        {users.map((user:any) => (
-                            <div key={user.id} className="flex flex-col gap-1 text-center border rounded-xl border-icy-blue">
-                                <p className="px-4 py-2 font-bold text-lg text-neon-teal">{user.name}</p>
-                                <p className="px-4 py-2">{user.email}</p>
-                                <p className="px-4 py-2">{user.company}</p>
+                {/* form to add */}
+                <div className="flex flex-col gap-5 items-center w-full md:w-1/2">
+                    <form className="py-10 flex flex-col items-center gap-5" onSubmit={handleSubmit}>
+                        <div className="flex flex-col justify-center items-center gap-5">
+                            
+                            {/* name */}
+                            <div className="flex flex-col items-center gap-2">
+                                <label className="text-neon-teal font-bold text-lg">Name</label>
+                                <input
+                                    type="text"
+                                    value={formdata.name}
+                                    onChange={(e) => setFormdata({ ...formdata, name: e.target.value })}
+                                    placeholder="first last"
+                                    className={inputClass('name')}
+                                />
                             </div>
-                        ))}
+                            
+                            {/* email */}
+                            <div className="flex flex-col items-center gap-2">
+                                <label className="text-neon-teal font-bold text-lg">Email</label>
+                                <input
+                                    type="text"
+                                    value={formdata.email}
+                                    onChange={(e) => setFormdata({ ...formdata, email: e.target.value })}
+                                    placeholder="you@example.com"
+                                    className={inputClass('email')}
+                                />
+                            </div>
+
+                            {/* company / location */}
+                            <div className="flex flex-col items-center gap-2">
+                                <label className="text-neon-teal font-bold text-lg">Company / Location </label>
+                                <input
+                                    type="text"
+                                    value={formdata.company}
+                                    onChange={(e) => setFormdata({ ...formdata, company: e.target.value })}
+                                    placeholder="company X at Y"
+                                    className={inputClass('company')}
+                                />
+                            </div>
+                        </div>
+
+                        {/* submission */}
+                        <button
+                            type="submit"
+                            className="p-1 rounded-xl text-ice-white font-bold bg-green-500 hover:bg-green-600 active:bg-green-700 transition"
+                        >
+                            Submit
+                        </button>
+                    </form>
+                </div>
+
+                {/* table */}
+                <div className="border border-5 border-gray-900 rounded-xl w-full md:w-1/2">
+                    <div className="m-2 text-ice-white h-50 overflow-y-scroll">
+
+                        {/* table body */}
+                        <div className="flex flex-col gap-3 m-5">
+                            {users.map((user:any) => (
+                                <div key={user.id} className="flex flex-col gap-1 text-center border rounded-xl border-icy-blue">
+                                    <p className="px-4 py-2 font-bold text-lg text-neon-teal">{user.name}</p>
+                                    <p className="px-4 py-2">{user.email}</p>
+                                    <p className="px-4 py-2">{user.company}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
+
             </div>
             
         </div>
