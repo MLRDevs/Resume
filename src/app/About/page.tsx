@@ -58,12 +58,16 @@ export default function AboutPage() {
                             improving with each one.
                         </div>
                         <div className="text-left text-ice-white text-lg">
-                            After graduation of High School, I then went to Northern Michigan Univeristy to study Computer Science. 
-                            Once Covid hit, it did get tougher leading me to take some time off and then come back to Northern in Winter of 2022.
-                            In the time I wasn't at Northern, I spent it learning as much as I can. Once I took that break I instantly wanted to get 
-                            back as soon as I could. I spent that time learning more about C++ and Python.  
-                            I graduated in December of 2023 with my Associate's of Science and then in May 2025 with my Bachelor's of Science 
-                            in Computer Science with a minor in Mathematics. 
+                            These skills and a passion for CS took me to Northern Michigan University where I studied CS and graduated
+                            with my B.S. of Science. While at Northern, I developed more programming skills not only inside the classroom,
+                            but outside of it as well. Learning python to make a data scraping project, some Unity and C# to develop my 
+                            first game, and also some full stack engineering which would continue after graduation like the site you're 
+                            currently viewing.
+                        </div>
+                        <div className="text-left text-ice-white text-lg">
+                            This would then take me to Colorado to hunt for my first job post graduation. I eventually landed on a QA job 
+                            in biometrics at iBeta Quality Assurance where after 6 months, I moved back home to Michigan where I reside now 
+                            in Sault Ste. Marie.
                         </div>
                     </div>
                     
