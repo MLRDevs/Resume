@@ -64,7 +64,7 @@ const Timeline = () => {
         { tier: 'Growing', type: 'Concepts', title: 'Dynamic Programming' },
         { tier: 'Growing', type: 'Tools', title: 'MacOS' },
 
-        { tier: 'Exposure', type: 'Languages', title: 'Kotlin' },
+        { tier: 'Exposure', type: 'Language', title: 'Kotlin' },
         { tier: 'Exposure', type: 'Language', title: 'Assembly' },
         { tier: 'Exposure', type: 'Language', title: 'Smalltalk' },
         { tier: 'Exposure', type: 'Language', title: 'C' },
@@ -88,7 +88,7 @@ const Timeline = () => {
     ];
 
     const iconmap:any = {
-        Languages: <IoTerminalOutline size={24} />,
+        Language: <IoTerminalOutline size={24} />,
         'Web Development': <FaCode size={24} />,
         Tools: <FaTools size={24} />,
         Databases: <FaDatabase size={24} />,
